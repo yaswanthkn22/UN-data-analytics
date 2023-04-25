@@ -3,7 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.use('TkAgg')
 
-asean_countries = {'Brunei', 'Cambodia','Indonesia', 'Laos', 'Malaysia', 'Myanmar','Philippines','Singapore','Thailand', 'Vietnam'}
+asean_countries = {'Brunei Darussalam', 'Cambodia','Indonesia', 'Laos', 'Malaysia', 'Myanmar','Philippines','Singapore','Thailand', 'Vietnam'}
 countires_population_dict = {} 
 
 def fill_countries_population(eachrow):

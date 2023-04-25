@@ -28,7 +28,7 @@ def plot():
     plt.xlabel('Years')
     plt.ylabel('Population')
     
-    plt.bar(years, population , align='edge')
+    plt.bar(years, population ,width=0.4 ,align='edge')
     plt.tight_layout()
     plt.show()
     
