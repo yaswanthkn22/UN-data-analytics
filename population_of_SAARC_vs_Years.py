@@ -5,12 +5,15 @@ import numpy as np
 matplotlib.use('TkAgg')
 
 
-saarc_countries = {'Afghanistan','Bangladesh','Bhutan','India','Maldives','Nepal','Pakistan','Sri Lanka'}
+saarc_countries = {'Afghanistan','Bangladesh'
+                    ,'Bhutan','India','Maldives',
+                    'Nepal','Pakistan','Sri Lanka'}
 
 saarc_country_population = {}
 
 
 def fill_countries_population(eachrow):
+    """ Fill population of saarc countries"""
 
     if eachrow['Region'] in saarc_countries:
 
@@ -26,8 +29,8 @@ def fill_countries_population(eachrow):
 
 
 def calculate():
-
-    with open('data/population-estimates.csv') as csv_file:
+    """Reading csv file and calling fill_countries_population()"""
+    with open('data/population-estimates.csv',encoding='utf-8') as csv_file:
 
         csv_reader = csv.DictReader(csv_file)
 
@@ -36,7 +39,7 @@ def calculate():
 
 
 def plot():
-
+    """Ploting the bar graph by unpacking dictionary"""
     years = []
     population = []
     
@@ -51,10 +54,12 @@ def plot():
     plt.ylabel('Population')
     plt.bar(x_axis, population )
     plt.xticks(x_axis,years)
+    plt.xticks(rotation=90)
     plt.tight_layout()
     plt.show()
 
 def exicute():
+    """Calling calculate() and plot() function"""
     calculate()
     plot()
 

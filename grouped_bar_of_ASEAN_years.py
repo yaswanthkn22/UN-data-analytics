@@ -6,10 +6,16 @@ matplotlib.use('TkAgg')
 
 asean_population_over_years = {}
 
-asean_countries = {'Brunei Darussalam', 'Cambodia','Indonesia', 'Laos', 'Malaysia', 'Myanmar','Philippines','Singapore','Thailand', 'Vietnam'}
+asean_countries = {'Brunei Darussalam',
+                    'Cambodia','Indonesia', 
+                    'Laos', 'Malaysia',
+                     'Myanmar','Philippines',
+                    'Singapore','Thailand', 
+                    'Vietnam'}
 
 def fill_asean_population_over_years(eachrow):
 
+    """filling asean_populaiton_over_years"""
     if eachrow['Region'] in asean_countries:
 
         if eachrow['Region'] in asean_population_over_years:
@@ -24,8 +30,8 @@ def fill_asean_population_over_years(eachrow):
 
 
 def calculate():
-    """Doc String"""
-    with open('data/population-estimates.csv') as csv_file:
+    """Reading csv file and calling fill_asean_population_over_years()"""
+    with open('data/population-estimates.csv',encoding='utf-8') as csv_file:
 
         csv_reader = csv.DictReader(csv_file)
 
@@ -35,7 +41,7 @@ def calculate():
 
 
 def plot ():
-    """ Doc String"""
+    """ ploting the grouped bar chart """
     years = [str(j) for j in range(2004, 2015)]
     countries = []
 
@@ -65,6 +71,7 @@ def plot ():
     plt.show()
 
 def exicute():
+    """Calling calculate and plot functions"""
     calculate()
     plot()
 
