@@ -1,5 +1,5 @@
 ># Analytics of UN Population 
-## __Aim__
+## __Description__
 * To convert raw open data, country and year wise population estimates in this case, into charts that tell some kind of story.
 
 >## Data Source
@@ -35,6 +35,7 @@ In this case for each year you have to calculate the sum of the population of al
 >## Instructions
 <br>
 
+
 * download the required packages from requirement.txt file
 * ``` 
         pip install -r requirement.txt
@@ -44,6 +45,10 @@ In this case for each year you have to calculate the sum of the population of al
 * ```
     sudo apt-get install python-tk
   ```
+## Credits
+
+* This project is done by Yaswanth K N 
+* Speacial mention to the data contributors
 
 
   
